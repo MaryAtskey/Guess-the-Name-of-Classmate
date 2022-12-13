@@ -12,29 +12,47 @@
 
 <body>
     <div class="container">
+
+        <!-- title -->
         <h1>Guess the name of a classmate</h1>
-        <div class="result">
-            Result goes here
+
+        <!-- result area -->
+        <div class="result"></div>
+
+        <!-- area with names amount alternatives -->
+        <div class="howMany">
+            <span>How many persons will you guess?</span>
+            <div class="group">
+                <button onclick=selectHowMany(10,0) class="persons10 personsnum">10</button>
+                <button onclick=selectHowMany(20,1) class="persons20 personsnum">20</button>
+                <button onclick=selectHowMany(41,2) class="persons41 personsnum">41</button>
+            </div>
         </div>
+
+        <!-- Images area and restart button -->
         <div class="imageBox" id="photo">
-            Photo goes here
+            <p class='imageBoxText'></p>
+            <button onclick=restartGame() class="restart">Restart game</button>
+            <img src='./photos/abdi_ali.png' alt='' class='imageBoxImg' />
         </div>
+
+        <!-- area with 4 random names alternatives/buttons -->
         <div class="nameList">
-            <button class="nameOption" onclick="" id="person1">name1</button>
-
-            <button class="nameOption" id="person2">name2</button>
-
-            <button class="nameOption" id="person3">name3</button>
-
-            <button class="nameOption" id="person4">Maryia Tamasheuskaya</button>
+            <button class="nameOption" onclick=selectNameOption(0) id="person1"></button>
+            <button class="nameOption" onclick=selectNameOption(1) id="person2"></button>
+            <button class="nameOption" onclick=selectNameOption(2) id="person3"></button>
+            <button class="nameOption" onclick=selectNameOption(3) id="person4"></button>
         </div>
+
+        <!-- area with check and next buttons -->
         <div class="navigation">
-            <button class="check">Check</button>
-            <button class="next">Next</button>
+            <button class="check" onclick=checkAnswer()>Check</button>
+            <button class="next" onclick=loadNext()>Next</button>
         </div>
     </div>
-    <script src="guess.js"></script>
 
+    <!-- javascript code -->
+    <script src="guess.js"></script>
 
 </body>
 
