@@ -7,20 +7,21 @@ body {
 }
 
 h1 {
-    height: 10vh;
+    height: 8vh;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     color: white;
 }
 
 .result {
-    margin: 10px;
     padding: 5px;
     width: 62vw;
     height: 10vh;
     text-align: center;
-    font-size: 40px;
+    font-size: 32px;
     color: white;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
@@ -31,35 +32,105 @@ h1 {
     align-items: center;
 }
 
-.imageBox {
-    margin: 10px;
+.howMany {
+    display: flex;
+    flex-direction: column;
     padding: 5px;
     width: 62vw;
-    height: 30vh;
+    height: 16vh;
     background-color: #06283c;
-    font-size: x-large;
+    color: white;
+    font-size: larger;
+    align-items: center;
+}
+
+.group {
+    display: flex;
+    width: 62vw;
+    height: 8vh;
+    margin: 20px;
+    padding: 5px;
+    background-color: #06283c;
+    color: white;
+    justify-content: center;
+}
+
+.persons10 {
+    padding: 5px;
+    margin: 5px;
+    width: 15vw;
+    height: 6vh;
+    background-color: darkorange;
+    color: white;
+    font-size: larger;
+}
+
+.persons20 {
+    padding: 5px;
+    margin: 5px;
+    width: 15vw;
+    height: 6vh;
+    background-color: darkorange;
+    color: white;
+    font-size: larger;
+}
+
+.persons41 {
+    padding: 5px;
+    margin: 5px;
+    width: 15vw;
+    height: 6vh;
+    background-color: darkorange;
+    color: white;
+    font-size: larger;
+}
+
+.persons10:hover {
+    background-color: lightsalmon;
+}
+
+.persons20:hover {
+    background-color: lightsalmon;
+}
+
+.persons41:hover {
+    background-color: lightsalmon;
+}
+
+.imageBox {
+    width: 62vw;
+    height: 30vh;
+    margin: 10px;
+    padding: 5px;
+    background-color: #06283c;
+    color: white;
     text-align: center;
     align-items: center;
     justify-content: center;
-    color: white;
+}
 
+.imageBoxText {}
+
+.imageBoxImg {
+    height: 100%;
+    display: none;
 }
 
 .nameList {
     display: flex;
-    justify-content: space-around;
+    width: 62vw;
+    height: 6vh;
     margin: 10px;
     padding: 5px;
-    width: 62vw;
-    height: 10vh;
     background-color: #06283c;
-
+    justify-content: space-around;
 }
 
 .nameOption {
+    display: none;
     padding: 10px;
     width: 15vw;
-    height: 8vh;
+    height: 7vh;
     font-size: larger;
     background-color: #256e84;
     color: white;
@@ -69,21 +140,25 @@ h1 {
     background-color: #5ab9d9dd;
 }
 
+.correct-answer {
+    background-color: green;
+}
+
 .navigation {
+    display: flex;
     width: 62vw;
     height: 8vh;
     margin: 10px;
     padding: 5px;
-    display: flex;
     justify-content: space-between;
     background-color: #06283c;
 }
 
 .check {
-    display: flex;
+    display: none;
     float: left;
     width: 30vw;
-    height: 8vh;
+    height: 6vh;
     padding: 5px;
     font-size: larger;
     color: white;
@@ -93,9 +168,9 @@ h1 {
 }
 
 .next {
-    display: flex;
+    display: none;
     width: 30vw;
-    height: 8vh;
+    height: 6vh;
     padding: 5px;
     font-size: larger;
     color: white;
@@ -112,15 +187,37 @@ h1 {
     background-color: lightsalmon;
 }
 
+.restart {
+    display: none;
+    width: 30vw;
+    height: 6vh;
+    margin: 0 auto;
+    padding: 5px;
+    color: white;
+    font-size: larger;
+    background-color: darkorange;
+    align-items: center;
+    justify-content: center;
+}
 
-/* mobile version */
+.restart:hover {
+    background-color: lightsalmon;
+}
+
+.selectedButton {
+    outline: 4px solid #82eefd;
+}
+
+
+
+/* ipad/mobile version */
 @media screen and (max-width: 600px) {
 
     .container {
         width: 100%;
     }
 
-  /* change font-size */
+    /* change font-size */
     h1 {
         font-size: 32px;
     }
@@ -139,26 +236,38 @@ h1 {
     .nameList {
         width: 100%;
         height: auto;
+        margin: 0%;
         flex-direction: column;
         align-items: center;
     }
 
     .nameOption {
         width: 90%;
+        margin: 0%;
     }
 
     .navigation {
         width: 100%;
         height: auto;
+        margin: 0%;
         flex-direction: column;
         align-items: center;
     }
 
     .check {
         width: 90%;
+        margin: 0%;
     }
 
     .next {
         width: 90%;
+        margin: 0%;
+    }
+
+    .restart {
+        width: 40vw;
+        margin: 0%;
+        align-items: center;
+        margin-left: 30%;
     }
 }
