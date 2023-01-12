@@ -75,7 +75,7 @@ h1 {
     font-size: larger;
 }
 
-.persons41 {
+.personsAll {
     padding: 5px;
     margin: 5px;
     width: 15vw;
@@ -93,7 +93,7 @@ h1 {
     background-color: lightsalmon;
 }
 
-.persons41:hover {
+.personsAll:hover {
     background-color: lightsalmon;
 }
 
